@@ -115,9 +115,7 @@ class DirList
                     $size = round($size, 2) . ' MB';
                 } else {
                     $size /= 1024;
-                    if ($size < 1024) {
-                        $size = round($size, 2) . ' GB';
-                    }
+                    $size = round($size, 2) . ' GB';
                 }
             }
         }
@@ -246,6 +244,7 @@ class DirList
     {
         if (empty($s)) return [];
         $list = [];
+        $audio_list = [];
         $all_files = $this->get_all_files();
         foreach ($all_files as $file) {
             if (stripos($file['name'], $s) === false) continue;
@@ -269,9 +268,15 @@ class DirList
                 'size_format' => $this->size_format($size),
                 'view_type' => $view_type,
             ];
+            if ($view_type == 'audio') {
+                $audio_list[] = [
+                    'name' => $file['name'],
+                    'url' => $src,
+                ];
+            }
             if (count($list) >= 100) break;
         }
-        return $list;
+        return ['list' => $list, 'audio_list' => $audio_list];
     }
 
     // 目录列表

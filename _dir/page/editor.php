@@ -29,7 +29,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>文本编辑器</title>
-    <link rel="stylesheet" href="./_dir/static/css/editor.css"/>
+    <link rel="stylesheet" href="./_dir/static/css/editor.css?v=2"/>
 </head>
 <body>
 <form id="file_content_form" method="POST">
@@ -44,11 +44,11 @@ header('Content-Type: text/html; charset=UTF-8');
 	<input type="submit" value="保存" name="save" style="float: right;"  class="input_button input_primary"/>
 </div>
 </form>
-<script src="<?php echo $cdnpublic?>jquery/3.6.1/jquery.min.js"></script>
+<script src="<?php echo $cdnpublic?>jquery/3.7.1/jquery.min.js"></script>
 <script src="<?php echo $cdnpublic?>layer/3.1.1/layer.js"></script>
-<script src="<?php echo $cdnpublic?>ace/1.28.0/ace.js"></script>
-<script src="<?php echo $cdnpublic?>ace/1.28.0/ext-language_tools.js"></script>
-<script src="<?php echo $cdnpublic?>ace/1.28.0/ext-modelist.js"></script>
+<script src="<?php echo $cdnpublic?>ace/1.43.3/ace.js"></script>
+<script src="<?php echo $cdnpublic?>ace/1.43.3/ext-language_tools.js"></script>
+<script src="<?php echo $cdnpublic?>ace/1.43.3/ext-modelist.js"></script>
 <script type="text/javascript">
 ace.require("ace/ext/language_tools");
 editor = ace.edit("file_content");

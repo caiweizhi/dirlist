@@ -39,8 +39,7 @@ switch($c){
         $s = isset($_GET['s'])?trim($_GET['s']):'';
         if($s == '') exit("<script language='javascript'>window.location.href='./';</script>");
         try{
-            $list = $x->search_files($s);
-            $r = ['list'=>$list];
+            $r = $x->search_files($s);
         }catch(Exception $e){
             $errmsg = $e->getMessage();
         }

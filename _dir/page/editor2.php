@@ -29,7 +29,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>文本编辑器</title>
-    <link rel="stylesheet" href="./_dir/static/css/editor.css"/>
+    <link rel="stylesheet" href="./_dir/static/css/editor.css?v=2"/>
 </head>
 <body>
 <form id="file_content_form" method="POST">
@@ -46,13 +46,13 @@ header('Content-Type: text/html; charset=UTF-8');
 	<input type="submit" value="保存" name="save" style="float: right;"  class="input_button input_primary"/>
 </div>
 </form>
-<script src="<?php echo $cdnpublic?>jquery/3.6.1/jquery.min.js"></script>
+<script src="<?php echo $cdnpublic?>jquery/3.7.1/jquery.min.js"></script>
 <script src="<?php echo $cdnpublic?>layer/3.1.1/layer.js"></script>
-<script src="<?php echo $cdnpublic?>monaco-editor/0.52.2/min/vs/loader.min.js"></script>
+<script src="<?php echo $cdnpublic?>monaco-editor/0.53.0/min/vs/loader.min.js"></script>
 <script type="text/javascript">
 var editor;
 var currentTheme = 'vs-light';
-require.config({ paths: { 'vs': '<?php echo $cdnpublic?>monaco-editor/0.52.2/min/vs' }, 'vs/nls': {availableLanguages: {'*': 'zh-cn'}}});
+require.config({ paths: { 'vs': '<?php echo $cdnpublic?>monaco-editor/0.53.0/min/vs' }, 'vs/nls': {availableLanguages: {'*': 'zh-cn'}}});
 require(['vs/editor/editor.main'], function () {
 
     function getLanguageFromFilename(filename) {

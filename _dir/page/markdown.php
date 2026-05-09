@@ -22,7 +22,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MDtoHTML</title>
-    <link rel="stylesheet" href="<?php echo $cdnpublic?>twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $cdnpublic?>twitter-bootstrap/4.6.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $cdnpublic?>github-markdown-css/5.1.0/github-markdown.min.css">
 <style>
     body {background-color: #eee!important;}
